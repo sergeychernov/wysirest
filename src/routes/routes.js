@@ -37,7 +37,7 @@ var appRouter = function (app) {
 					for(path in newServices[type]){
 						if (newServices[type].hasOwnProperty(path)) {
 							addEndPoint(type,path);
-							services[type][key] = newServices[type][key];
+							services[type][path] = newServices[type][path];
 						}
 				}
 				}
