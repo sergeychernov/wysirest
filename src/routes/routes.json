@@ -1,48 +1,68 @@
 {
-  "/auth": {
-    "payload": {
-      "token": "string"
-    }
-  },
-  "/auth2": {
-    "service": {
-      "messageId": 1,
-      "message": "hello world"
+  "get":{
+    "/auth": {
+      "payload": {
+        "token": "string"
+      }
     },
-    "payload": {
-      "token": "string"
-    }
-  },
-  "/client/register": {
-    "service": {
-      "messageId": 3
+    "/client/register": {
+      "service": {
+        "messageId": 3
+      },
+      "payload": {
+        "token": "LocalApi"
+      }
     },
-    "payload": {
-      "token": "LocalApi"
-    }
-  },
-  "/client/accounts": {
-    "payload": {
-      "accounts": [
-        {
-          "accountId": "5afc4ce4b7a3f6000131f2e81234",
-          "balance": 2.001,
-          "type": "BTC"
-        },
-        {
-          "accountId": "5afc4ce4b7a3f6000131f2e81235",
-          "balance": 235.4,
-          "type": "ETH"
+    "/client/accounts": {
+      "payload": {
+        "accounts": [
+          {
+            "accountId": "5afc4ce4b7a3f6000131f2e81234",
+            "balance": 2.001,
+            "type": "BTC"
+          },
+          {
+            "accountId": "5afc4ce4b7a3f6000131f2e81235",
+            "balance": 235.4,
+            "type": "ETH"
+          }
+        ]
+      }
+    },
+    "/client/accounts/BTC": {
+      "payload": {
+        "accountDetails": {
+          "address": "A1x34",
+          "balance": 2.001
         }
-      ]
-    }
-  },
-  "/client/accounts/BTC": {
-    "payload": {
-      "accountDetails": {
-        "address": "A1x34",
-        "balance": 2.001
+      }
+    },
+    "/configuration": {
+      "payload": {
+        "currencies": [
+          {
+            "id": 0,
+            "shortname": "BTC",
+            "longname": "Bitcoins"
+          },
+          {
+            "id": 0,
+            "shortname": "ETH",
+            "longname": "Etherium"
+          },
+          {
+            "id": 0,
+            "shortname": "ZEN",
+            "longname": "Zencoin"
+          },
+          {
+            "id": 0,
+            "shortname": "DOGE",
+            "longname": "Dogecoin"
+          }
+        ]
       }
     }
   }
+
 }
