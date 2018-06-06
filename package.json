@@ -1,0 +1,31 @@
+{
+  "name": "wysirest",
+  "version": "1.0.0",
+  "description": "Module to emulate rest backend.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergeychernov/wysirest.git"
+  },
+  "keywords": [
+    "rest",
+    "test"
+  ],
+  "author": "Chernov Sergey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sergeychernov/wysirest/issues"
+  },
+  "homepage": "https://github.com/sergeychernov/wysirest#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dot": "^1.1.2",
+    "express": "^4.16.3",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7"
+  }
+}

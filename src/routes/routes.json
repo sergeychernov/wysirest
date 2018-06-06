@@ -1,0 +1,48 @@
+{
+  "/auth": {
+    "payload": {
+      "token": "string"
+    }
+  },
+  "/auth2": {
+    "service": {
+      "messageId": 1,
+      "message": "hello world"
+    },
+    "payload": {
+      "token": "string"
+    }
+  },
+  "/client/register": {
+    "service": {
+      "messageId": 3
+    },
+    "payload": {
+      "token": "LocalApi"
+    }
+  },
+  "/client/accounts": {
+    "payload": {
+      "accounts": [
+        {
+          "accountId": "5afc4ce4b7a3f6000131f2e81234",
+          "balance": 2.001,
+          "type": "BTC"
+        },
+        {
+          "accountId": "5afc4ce4b7a3f6000131f2e81235",
+          "balance": 235.4,
+          "type": "ETH"
+        }
+      ]
+    }
+  },
+  "/client/accounts/BTC": {
+    "payload": {
+      "accountDetails": {
+        "address": "A1x34",
+        "balance": 2.001
+      }
+    }
+  }
+}
