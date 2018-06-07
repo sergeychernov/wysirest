@@ -30,9 +30,10 @@ var appRouter = function (app) {
 		if(req.body.services){
 			const newServices = JSON.parse(req.body.services);
 			for (var type in newServices) {
+				console.log('type',type);
 				if (newServices.hasOwnProperty(type)) {
 					if(!services.hasOwnProperty(type)){
-						newServices[type]={};
+						services[type]={};
 					}
 					for(path in newServices[type]){
 						if (newServices[type].hasOwnProperty(path)) {
