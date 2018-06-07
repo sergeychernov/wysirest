@@ -6,15 +6,17 @@ var appRouter = function (app) {
 	const addEndPoint = (type, path)=>{
 		switch(type){
 			case 'get':{
-				console.log(type, path);
+
 				app.get(path, function (req, res) {
 					const data = services[type][req.route.path];
+					console.log(type, req.route.path, data);
 					res.status(200).send(data);
 				});
 			}break;
 			case 'post':{
 				app.post(path, function (req, res) {
-					const data = services[req.route.path];
+					const data = services[type][req.route.path];
+					console.log(type, req.route.path, data);
 					res.status(200).send(data);
 				});
 			}break;
