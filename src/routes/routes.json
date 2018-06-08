@@ -39,34 +39,117 @@
     },
     "/configuration": {
       "payload": {
+        "mayBeInFuture": 6,
         "currencies": [
           {
             "id": 0,
-            "shortname": "BTC",
+            "type": "BTC",
             "longname": "Bitcoins"
           },
           {
             "id": 0,
-            "shortname": "ETH",
+            "type": "ETH",
             "longname": "Etherium"
           },
           {
             "id": 0,
-            "shortname": "ZEN",
-            "longname": "Zencoin"
+            "type": "LTC",
+            "longname": "Litecoin"
           },
           {
             "id": 0,
-            "shortname": "DOGE",
-            "longname": "Dogecoin"
+            "type": "BCH",
+            "longname": "Bitcoin Cashe"
           }
         ]
+      }
+    },
+    "/client/operations/BTC": {
+      "payload": {
+        "operations": {
+          "depositOperations": [
+            {
+              "type": "BTC",
+              "dateTime": 1528329600,
+              "quantity": 8
+            },
+            {
+              "type": "BTC",
+              "dateTime": 1528329600,
+              "quantity": 8
+            }
+          ],
+          "withdrawalOperations": [
+            {
+              "type": "BTC",
+              "dateTime": 1528243200,
+              "quantity": 10,
+              "status": "RESOLVED",
+              "txId": "204f4b1f724dff9bbcc6608bc53f338bf9865b4e174a4447834112968f98804c"
+            },
+            {
+              "type": "BTC",
+              "dateTime": 1528243200,
+              "quantity": 23,
+              "status": "PENDING"
+            },
+            {
+              "type": "BTC",
+              "dateTime": 1528243200,
+              "quantity": 23,
+              "status": "PENDING"
+            }
+          ]
+        }
+      }
+    },
+    "/client/operations": {
+      "payload": {
+        "operations": {
+          "depositOperations": [
+            {
+              "type": "BTC",
+              "dateTime": 1528329600,
+              "quantity": 8
+            },
+            {
+              "type": "BTC",
+              "dateTime": 1528329600,
+              "quantity": 8
+            }
+          ],
+          "withdrawalOperations": [
+            {
+              "type": "BTC",
+              "dateTime": 1528243200,
+              "quantity": 10,
+              "status": "RESOLVED",
+              "txId": "204f4b1f724dff9bbcc6608bc53f338bf9865b4e174a4447834112968f98804c"
+            },
+            {
+              "type": "BTC",
+              "dateTime": 1528243200,
+              "quantity": 23,
+              "status": "PENDING"
+            },
+            {
+              "type": "BTC",
+              "dateTime": 1528243200,
+              "quantity": 23,
+              "status": "PENDING"
+            }
+          ]
+        }
       }
     }
   },
   "post": {
     "/client/wallet/new": {
-      "payload": {}
+      "payload": {
+        "accountId": "5afc4ce4b7a3f6000131f2e81239",
+        "type": "LTC",
+        "balance": 0
+      }
     }
   }
 }
